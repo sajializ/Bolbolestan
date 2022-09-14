@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Table
+metadata:
+  name: Students
+spec:
+  database: Bolbolestan
+  name: Students
+  schema:
+    mysql:
+      isDeleted: true

@@ -1,0 +1,33 @@
+.modal-header {
+  padding: 2px 16px;
+  font-family: Vazir;
+  border-bottom: 0;
+}
+.modal-footer {
+  border-top: 0;
+}
+.modal-footer button {
+  margin: 0 5px;
+  width: 100px;
+}
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 12px;
+  top: 60%;
+  width: 40% !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}

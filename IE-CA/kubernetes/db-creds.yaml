@@ -1,0 +1,8 @@
+apiVersion: v1
+data: 
+  password: MTIzNDU2Nzg=
+  username: cm9vdA==
+kind: Secret
+metadata: 
+  name: database-creds
+type: Opaque

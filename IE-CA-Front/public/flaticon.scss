@@ -1,0 +1,73 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?18dc9ea00b98ed84675df2130a032625") format("truetype"),
+url("./flaticon.woff?18dc9ea00b98ed84675df2130a032625") format("woff"),
+url("./flaticon.woff2?18dc9ea00b98ed84675df2130a032625") format("woff2"),
+url("./flaticon.eot?18dc9ea00b98ed84675df2130a032625#iefix") format("embedded-opentype"),
+url("./flaticon.svg?18dc9ea00b98ed84675df2130a032625#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "log-out": "\f101",
+    "linkedin-logo": "\f102",
+    "twitter-logo-on-black-background": "\f103",
+    "instagram": "\f104",
+    "facebook": "\f105",
+    "copyright": "\f106",
+    "calendar": "\f107",
+    "loupe": "\f108",
+    "refresh-arrow": "\f109",
+    "clock-circular-outline": "\f10a",
+    "add": "\f10b",
+    "trash-bin": "\f10c",
+);
+
+.flaticon-log-out:before {
+    content: map-get($flaticon-map, "log-out");
+}
+.flaticon-linkedin-logo:before {
+    content: map-get($flaticon-map, "linkedin-logo");
+}
+.flaticon-twitter-logo-on-black-background:before {
+    content: map-get($flaticon-map, "twitter-logo-on-black-background");
+}
+.flaticon-instagram:before {
+    content: map-get($flaticon-map, "instagram");
+}
+.flaticon-facebook:before {
+    content: map-get($flaticon-map, "facebook");
+}
+.flaticon-copyright:before {
+    content: map-get($flaticon-map, "copyright");
+}
+.flaticon-calendar:before {
+    content: map-get($flaticon-map, "calendar");
+}
+.flaticon-loupe:before {
+    content: map-get($flaticon-map, "loupe");
+}
+.flaticon-refresh-arrow:before {
+    content: map-get($flaticon-map, "refresh-arrow");
+}
+.flaticon-clock-circular-outline:before {
+    content: map-get($flaticon-map, "clock-circular-outline");
+}
+.flaticon-add:before {
+    content: map-get($flaticon-map, "add");
+}
+.flaticon-trash-bin:before {
+    content: map-get($flaticon-map, "trash-bin");
+}

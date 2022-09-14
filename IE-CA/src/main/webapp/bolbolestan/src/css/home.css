@@ -1,0 +1,151 @@
+.main {
+  display: flex;
+  padding-top: 50px;
+}
+.report-body {
+  width: 70%;
+  margin: 0 auto;
+  display: inline-block;
+}
+.container {
+  width: 100%;
+}
+.row {
+  margin: 10px 30px;
+}
+.col-3,
+.col-2,
+.col-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.row.course-row div {
+  border-left: solid 1px #1fa5ff;
+  padding: 4px 0;
+}
+.row.average-row div {
+  padding: 4px 0;
+}
+
+.row.rounded.primary-border.course-row, .row.average-row {
+  margin: 16px 32px !important;
+}
+
+.slide-show {
+  background-image: url("../images/cover\ photo.jpg");
+  background-repeat: round;
+  height: 500px;
+}
+.average-btn {
+  padding: 12px;
+  width: 50%;
+}
+.profile {
+  width: 20%;
+  min-width: 200px;
+  padding: 16px;
+  border-left: solid #0087e0;
+  height: 100vw;
+  display: inline-block;
+}
+.avatar {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.study-state {
+  padding: 4px;
+  width: 80%;
+  margin: auto;
+}
+.course {
+  padding: 2px;
+  width: 90%;
+  margin: auto;
+}
+.course-passed {
+  background-color: rgba(40, 167, 69, 0.25);
+}
+.course-failed {
+  background-color: rgba(255, 89, 94, 0.25);
+}
+.course-unknown {
+  background-color: rgba(153, 153, 153, 0.25);
+}
+.report-card {
+  padding: 50px;
+  width: 100%;
+  overflow-x: auto;
+}
+@media screen and (max-width: 1050px) {
+  .slide-show {
+    height: 300px;
+  }
+  .profile {
+    height: 100%;
+  }
+  .row {
+    font-size: 14px;
+  }
+  .row .btn {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .profile {
+    font-size: 14px;
+  }
+  .report-body {
+    width: 94%;
+    overflow-x: scroll;
+    font-size: 14px;
+  }
+  .average-btn {
+    min-width: 100px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .profile {
+    display: block;
+    width: 100%;
+    height: 500px;
+    border-left: none;
+  }
+  .main {
+    display:block;
+    padding-top: 50px;
+  }
+  .report-body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  .report-card {
+    width: 100%;
+    padding: 50px 0;
+    overflow-x: hidden;
+    font-size: 14px;
+  }
+  .course {
+    font-size: 10px;
+    padding: 0;
+  }
+  .col-1 {
+      font-size: small;
+  }
+  .row {
+    overflow-x: scroll;
+  }
+  .col-3,
+  .col-2,
+  .col-1 {
+    padding: 2px;
+  }
+}

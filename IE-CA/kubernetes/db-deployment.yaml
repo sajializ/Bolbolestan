@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db-deployment
+spec:
+  selector:
+    matchLabels:
+      app: db
+  strategy:
+      rollingUpdate:
+        maxUnavailable: 1
+  template:
+    metadata:
+      labels:
+        app: db
+    spec:
+      containers:
+      - image: quay.io/aminrf/mysql:5.7.16
+        name: db
+        env:
+        - name: "MYSQL_ROOT_PASSWORD"
+          valueFrom:
+            secretKeyRef:
+              key: password
+              name: database-creds
+        - name: "MYSQL_DATABASE"
+          value: "Bolbolestan"
+        ports:
+        - containerPort: 3306
+          name: db
+        resources:
+            limits:
+              memory: "500M"
+              cpu: "333m"
+            requests:
+              memory: "500M"
+              cpu: "333m"
+        volumeMounts:
+        - name: mysql-persistent-storage
+          mountPath: /var/lib/mysql
+          subPath: backend-mysql
+      volumes:
+      - name: mysql-persistent-storage
+        persistentVolumeClaim:
+          claimName: db-mysql-pvc
